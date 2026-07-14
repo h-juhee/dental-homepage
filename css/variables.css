@@ -1,0 +1,21 @@
+:root {
+  --color-background: #fff;
+  --color-surface: #f5f5f3;
+  --color-surface-alt: #fafafa;
+  --color-border: #dededb;
+  --color-text: #171717;
+  --color-muted: #747474;
+  --color-accent: #17345c;
+  --content-width: 1440px;
+  --page-padding: clamp(20px, 4vw, 72px);
+  --header-height: 80px;
+  --section-space: clamp(96px, 12vw, 200px);
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-title: clamp(2rem, 4vw, 4rem);
+  --z-header: 100;
+  --z-sticky: 10;
+  --duration-fast: 200ms;
+  --duration-normal: 500ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}

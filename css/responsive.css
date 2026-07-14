@@ -1,0 +1,154 @@
+/* Desktop: 1280px and wider uses the base layout. */
+@media (min-width: 768px) and (max-width: 1279px) {
+  :root { --header-height: 72px; --section-space: clamp(80px, 10vw, 128px); }
+  .site-header__inner { gap: clamp(16px, 2vw, 28px); }
+  .site-nav__list { gap: clamp(22px, 3vw, 40px); }
+  .site-header__actions { gap: 0.5rem; }
+  .site-header__night-clinic { width: clamp(92px, 10vw, 120px); }
+  .main-visual, .main-visual__swiper, .main-visual__slide { min-height: 720px; height: 88svh; }
+  .main-visual__content { padding-bottom: 150px; }
+  .main-visual__title { font-size: clamp(2.75rem, 6vw, 4.75rem); }
+  .main-visual__navigation { max-width: 620px; }
+  .doctor-overview { grid-template-columns: minmax(0, 0.75fr) minmax(260px, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 3vw, 44px); }
+  .doctor-overview__visual { min-height: 560px; }
+  .doctor-overview__photo-placeholder { min-height: 430px; }
+  .philosophy-story__message { font-size: clamp(2.75rem, 7vw, 5rem); }
+  .doctor-story__sticky { grid-template-columns: minmax(0, 25fr) minmax(230px, 34fr) minmax(0, 41fr); }
+  .doctor-story__portrait { height: min(76svh, 650px); }
+  .doctor-story__content { min-height: 540px; }
+  .doctor-profile__badges { gap: 0.4rem; }
+  .doctor-profile__badges li { padding: 0.35rem 0.6rem; font-size: 0.75rem; }
+  .doctor-careers { gap: 1rem; }
+  .signature-treatment-accordion { height: auto; flex-direction: column; }
+  .signature-treatment-card { min-width: 0; min-height: 112px; flex: none; }
+  .signature-treatment-card.is-active { min-height: 360px; }
+  .signature-treatment-card__content { padding: clamp(24px, 4vw, 40px); }
+  .clinical-cases__visual { min-height: 620px; }
+  .location-layout { grid-template-columns: minmax(0, 45fr) minmax(0, 55fr); }
+  .location-info__inner { padding: 64px clamp(32px, 4vw, 56px); }
+  .location-phone { font-size: clamp(2rem, 4vw, 3rem); }
+  .interior-card { width: min(82vw, 820px); }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .doctor-overview { min-height: 0; padding-bottom: 80px; grid-template-columns: minmax(220px, 0.8fr) minmax(280px, 1.2fr); gap: 40px; }
+  .doctor-overview__intro { padding-top: 0; }
+  .doctor-overview__visual { min-height: 520px; }
+  .doctor-overview__photo-placeholder { min-height: 440px; }
+  .doctor-overview__profile { padding: 0; grid-column: 1 / -1; }
+  .section--doctors { padding-block: var(--section-space); }
+  .doctor-story { padding-inline: var(--page-padding); }
+  .doctor-story__sticky { position: static; display: grid; min-height: 0; padding: 0; grid-template-columns: minmax(0, 0.75fr) minmax(280px, 1.25fr); overflow: visible; }
+  .doctor-story__intro { padding-block: 2rem; }
+  .doctor-story__progress { display: none; }
+  .doctor-story__visual { min-height: 520px; }
+  .doctor-story__portrait { height: 520px; }
+  .doctor-story__content { display: grid; min-height: 0; margin-top: 3rem; grid-column: 1 / -1; gap: 4rem; }
+  .doctor-story__panel, .doctor-story__panel.is-active { position: static; max-width: none; opacity: 1; pointer-events: auto; transform: none; visibility: visible; }
+  .doctor-story__panel:not(:first-child) { padding-top: 3rem; border-top: 1px solid var(--color-border); }
+  .doctor-careers { gap: 2rem; }
+  .doctor-story__steps { display: none; }
+}
+@media (max-width: 767px) {
+  :root { --header-height: 64px; --section-space: 72px; }
+  .site-nav { display: none; }
+  .site-header__inner { display: flex; justify-content: space-between; gap: 0.75rem; }
+  .site-header__logo { font-size: 0.9rem; }
+  .site-header__actions { display: flex; gap: 0.5rem; }
+  .site-header__language { width: 40px; height: 40px; }
+  .site-header__night-clinic { width: clamp(52px, 18vw, 84px); height: 40px; }
+  .main-visual, .main-visual__swiper, .main-visual__slide { min-height: 680px; height: calc(100svh - var(--header-height)); }
+  .main-visual__content { padding: 120px var(--page-padding) 176px; align-items: flex-end; }
+  .main-visual__title { max-width: 12ch; font-size: clamp(2.25rem, 11vw, 3.5rem); }
+  .main-visual__description { display: -webkit-box; overflow: hidden; font-size: 0.95rem; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  .main-visual__cta { margin-top: 1.5rem; }
+  .main-visual__navigation { bottom: 32px; left: 50%; width: min(calc(100% - 24px), 460px); grid-template-columns: 36px auto minmax(54px, 1fr) 36px 36px; gap: 7px; }
+  .main-visual__button, .main-visual__toggle { width: 36px; height: 36px; min-width: 36px; min-height: 36px; }
+  .main-visual__counter { font-size: 0.75rem; }
+  .main-visual__progress { max-width: 150px; }
+  .main-visual__scroll { display: none; }
+  .section--philosophy-story { min-height: max(760px, 110svh); }
+  .philosophy-story__sticky { position: relative; min-height: max(760px, 110svh); }
+  .philosophy-story__inner { display: flex; min-height: max(760px, 110svh); padding-block: 64px; flex-direction: column; }
+  .philosophy-story__heading { position: static; }
+  .philosophy-story__messages { position: static; display: grid; max-width: none; margin-top: auto; gap: 1.5rem; transform: none; }
+  .philosophy-story.is-fallback .philosophy-story__messages { position: static; padding-top: 0; }
+  .philosophy-story__message, .philosophy-story__message.is-active { position: static; max-width: 15em; opacity: 1; filter: none; font-size: clamp(2rem, 9vw, 3.25rem); pointer-events: auto; transform: none; visibility: visible; }
+  .philosophy-story__overlay { background: rgb(9 22 28 / 64%); }
+  .section__placeholder { min-height: 180px; }
+  .equipment__sticky { position: static; display: block; min-height: 0; padding-block: 0; }
+  .equipment__stage { display: flex; flex-direction: column; gap: 1rem; }
+  .equipment-item, .equipment-item:nth-child(2n), .equipment-item:nth-child(2n+1) { flex: none; width: 100%; transform: none; }
+  .equipment__content { margin-top: 1.5rem; }
+  .equipment__panels { display: grid; min-height: 0; gap: 1.5rem; }
+  .equipment__panel, .equipment__panel.is-active { position: static; opacity: 1; pointer-events: auto; transform: none; visibility: visible; }
+  .equipment__panel:not(:first-child) { padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
+  .equipment__steps { display: none; }
+  .equipment__scroll-guide { display: none; }
+  .equipment__scroll { display: none; }
+  .section--doctors { padding-block: var(--section-space); }
+  .doctor-overview { display: flex; min-height: 0; padding: 0 var(--page-padding); flex-direction: column; align-items: stretch; gap: 0; overflow: visible; }
+  .doctor-overview__intro { padding: 0; }
+  .doctor-overview__message { margin-top: 1.25rem; }
+  .doctor-overview__visual { min-height: 420px; margin-top: 2.5rem; }
+  .doctor-overview__photo-placeholder { width: min(90%, 340px); height: 380px; min-height: 0; }
+  .doctor-overview__profile { padding: 3rem 0 0; }
+  .doctor-overview__name { font-size: clamp(2.25rem, 12vw, 3.5rem); }
+  .doctor-story { padding-inline: var(--page-padding); }
+  .doctor-story__sticky { position: static; display: flex; min-height: 0; padding: 0; flex-direction: column; overflow: visible; }
+  .doctor-story__intro { padding: 0; }
+  .doctor-story__message { margin-top: 1.25rem; }
+  .doctor-story__progress { display: none; }
+  .doctor-story__visual { min-height: 360px; margin-top: 2.5rem; }
+  .doctor-story__symbol { width: min(86vw, 360px); }
+  .doctor-story__portrait { height: 360px; }
+  .doctor-story__portrait-placeholder { width: min(74%, 280px); }
+  .doctor-story__content { display: grid; min-height: 0; margin-top: 3rem; gap: 4rem; }
+  .doctor-story__panel, .doctor-story__panel.is-active { position: static; max-width: none; opacity: 1; pointer-events: auto; transform: none; visibility: visible; }
+  .doctor-story__panel:not(:first-child) { padding-top: 3rem; border-top: 1px solid var(--color-border); }
+  .doctor-profile__name { font-size: clamp(2.2rem, 12vw, 3.5rem); }
+  .doctor-story__statement, .doctor-story__panel-title { font-size: clamp(1.65rem, 7vw, 2.25rem); }
+  .doctor-principles li { grid-template-columns: 1fr; gap: 0.3rem; }
+  .doctor-careers { grid-template-columns: 1fr; gap: 2rem; }
+  .doctor-story__steps { display: none; }
+  .signature-treatment-accordion { height: auto; margin-top: 32px; flex-direction: column; gap: 8px; }
+  .signature-treatment-card { min-width: 0; min-height: 96px; flex: none; border-radius: 8px; transition: min-height var(--duration-normal) var(--ease-out); }
+  .signature-treatment-card.is-active { min-height: clamp(300px, 90vw, 420px); }
+  .signature-treatment-card__content { padding: 24px; }
+  .signature-treatment-card__title { font-size: clamp(1.2rem, 6vw, 1.6rem); }
+  .clinical-cases__visual { min-height: 540px; }
+  .clinical-cases__content { padding-block: 72px; justify-content: flex-end; }
+  .clinical-cases__title { font-size: clamp(2.25rem, 12vw, 3.5rem); }
+  .clinical-cases__lead { font-size: clamp(1.2rem, 6vw, 1.65rem); }
+  .clinical-cases__action { min-height: 140px; padding-block: 36px; }
+  .interior-heading { margin-bottom: 32px; align-items: flex-start; }
+  .interior-controls { gap: 0.4rem; }
+  .interior-counter { display: none; }
+  .interior-button { width: 44px; height: 44px; }
+  .interior-card { width: 86vw; }
+  .interior-card__media { aspect-ratio: 4 / 3; }
+  .section--location { min-height: 0; }
+  .location-layout { display: block; min-height: 0; }
+  .location-map { min-height: 0; height: clamp(320px, 92vw, 380px); }
+  .location-map__placeholder { min-height: 0; }
+  .location-info__inner { padding: 56px var(--page-padding) 72px; }
+  .location-info__brand { margin-bottom: 40px; }
+  .info-row { grid-template-columns: 1fr; gap: 12px; padding-block: 28px; }
+  .map-links { margin-top: 1.25rem; }
+  .map-link { flex: 0 1 auto; }
+  .location-phone { font-size: clamp(1.75rem, 9vw, 2.75rem); }
+  .clinic-hours__row { grid-template-columns: minmax(0, 1fr) auto; gap: 0.75rem; }
+  .site-footer { min-height: 0; padding-block: 64px; }
+  .site-footer__inner { grid-template-columns: 1fr; align-items: start; gap: 48px; }
+  .site-footer__address { display: grid; gap: 0.35rem; }
+  .site-footer__brand { justify-self: start; font-size: clamp(2.75rem, 15vw, 5rem); text-align: left; }
+  .top-button { width: 46px; height: 46px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section--philosophy-story { min-height: max(760px, 100svh); }
+  .philosophy-story__sticky { position: relative; min-height: max(760px, 100svh); }
+  .philosophy-story__messages { position: relative; top: auto; right: auto; left: auto; display: grid; padding-top: 30vh; gap: 1.5rem; transform: none; }
+  .philosophy-story__message, .philosophy-story__message.is-active { position: static; opacity: 1; filter: none; transform: none; visibility: visible; }
+  .philosophy-story__placeholder { transform: none !important; }
+  .doctor-story__panel, .doctor-story__panel.is-active { transform: none; }
+}

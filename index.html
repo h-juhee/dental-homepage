@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="치과 홈페이지 메인페이지 초기 구조">
+  <title>Dental Clinic</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.2/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+  <!-- Site header / GNB -->
+  <header class="site-header" data-site-header>
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="#main-visual" aria-label="홈으로 이동">로고영역</a>
+      <nav id="site-navigation" class="site-nav" aria-label="주요 메뉴">
+        <ul class="site-nav__list">
+          <li><span>GNB</span></li>
+          <li><span>GNB</span></li>
+          <li><span>GNB</span></li>
+          <li><span>GNB</span></li>
+          <li><span>GNB</span></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <button class="site-header__language" type="button" aria-label="언어 선택">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9S14.4 18.5 12 21M12 3C9.6 5.5 8.4 8.5 8.4 12S9.6 18.5 12 21"></path>
+          </svg>
+        </button>
+        <!-- Future night-clinic banner: add its confirmed text or link here. -->
+        <div class="site-header__night-clinic" aria-label="야간진료 배너 영역" role="img"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Main visual -->
+    <section id="main-visual" class="main-visual" aria-label="병원 주요 안내" data-main-visual data-section-pin>
+      <div class="swiper main-visual__swiper">
+        <div class="swiper-wrapper">
+          <article class="swiper-slide main-visual__slide" aria-hidden="false">
+            <div class="main-visual__media">
+              <div class="main-visual__media-inner main-visual__media-inner--01">
+                <!-- Replace with a responsive picture element for hero image 01. -->
+                <div class="main-visual__placeholder" aria-hidden="true"></div>
+              </div>
+            </div>
+            <div class="main-visual__overlay" aria-hidden="true"></div>
+            <div class="main-visual__content">
+              <div class="main-visual__content-inner">
+                <p class="main-visual__eyebrow" data-hero-animate>Dental Clinic</p>
+                <h1 class="main-visual__title" data-hero-animate>건강한 미소를 위한 진료</h1>
+                <p class="main-visual__description" data-hero-animate>병원의 진료 철학과 대표 메시지가 들어가는 영역입니다.</p>
+                <button class="main-visual__cta" type="button" data-hero-animate>진료 안내</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="swiper-slide main-visual__slide" aria-hidden="true">
+            <div class="main-visual__media">
+              <div class="main-visual__media-inner main-visual__media-inner--02">
+                <!-- Replace with a responsive picture element for hero image 02. -->
+                <div class="main-visual__placeholder" aria-hidden="true"></div>
+              </div>
+            </div>
+            <div class="main-visual__overlay" aria-hidden="true"></div>
+            <div class="main-visual__content">
+              <div class="main-visual__content-inner">
+                <p class="main-visual__eyebrow" data-hero-animate>Doctor</p>
+                <h2 class="main-visual__title" data-hero-animate>충분한 설명에서 시작되는 진료</h2>
+                <p class="main-visual__description" data-hero-animate>의료진의 진료 원칙을 소개하는 문구가 들어갑니다.</p>
+                <button class="main-visual__cta" type="button" data-hero-animate>의료진 소개</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="swiper-slide main-visual__slide" aria-hidden="true">
+            <div class="main-visual__media">
+              <div class="main-visual__media-inner main-visual__media-inner--03">
+                <!-- Replace with a responsive picture element for hero image 03. -->
+                <div class="main-visual__placeholder" aria-hidden="true"></div>
+              </div>
+            </div>
+            <div class="main-visual__overlay" aria-hidden="true"></div>
+            <div class="main-visual__content">
+              <div class="main-visual__content-inner">
+                <p class="main-visual__eyebrow" data-hero-animate>Signature Treatment</p>
+                <h2 class="main-visual__title" data-hero-animate>병원의 주력진료를 만나보세요</h2>
+                <p class="main-visual__description" data-hero-animate>대표 진료 분야에 대한 짧은 설명이 들어갑니다.</p>
+                <button class="main-visual__cta" type="button" data-hero-animate>주력진료 보기</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="main-visual__navigation">
+        <button class="main-visual__button main-visual__button--prev" type="button" aria-label="이전 슬라이드"><span aria-hidden="true">←</span></button>
+        <div class="main-visual__counter" aria-live="polite" aria-atomic="true">
+          <span data-hero-current>01</span><span aria-hidden="true"> / </span><span data-hero-total>03</span>
+        </div>
+        <div class="main-visual__progress" aria-hidden="true"><span class="main-visual__progress-bar" data-hero-progress></span></div>
+        <button class="main-visual__toggle" type="button" aria-label="자동 재생 일시정지" aria-pressed="false" data-hero-toggle><span class="main-visual__toggle-icon" aria-hidden="true"></span></button>
+        <button class="main-visual__button main-visual__button--next" type="button" aria-label="다음 슬라이드"><span aria-hidden="true">→</span></button>
+      </div>
+
+      <div class="main-visual__scroll" aria-hidden="true"><span>Scroll</span></div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy" class="section section--philosophy-story" data-philosophy-story>
+      <div class="philosophy-story">
+        <div class="philosophy-story__sticky">
+          <div class="philosophy-story__media">
+            <!-- Replace this placeholder with a responsive picture or a muted video later. -->
+            <div class="philosophy-story__placeholder" role="img" aria-label="진료 철학 배경 이미지 입력 예정"></div>
+          </div>
+          <div class="philosophy-story__overlay" aria-hidden="true"></div>
+
+          <div class="philosophy-story__inner">
+            <div class="philosophy-story__heading">
+              <p class="philosophy-story__eyebrow">Philosophy</p>
+              <h2 class="philosophy-story__title">진료 철학</h2>
+            </div>
+
+            <div class="philosophy-story__messages" aria-live="off">
+              <p class="philosophy-story__message is-active" data-philosophy-message data-philosophy-step="0" aria-hidden="false">정확하게 살피고</p>
+              <p class="philosophy-story__message" data-philosophy-message data-philosophy-step="1" aria-hidden="true">충분히 설명하며</p>
+              <p class="philosophy-story__message" data-philosophy-message data-philosophy-step="2" aria-hidden="true">꼭 필요한 진료를 제안합니다</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctors -->
+    <section id="doctors" class="section section--doctors" data-doctor-overview>
+      <div class="doctor-overview">
+        <header class="doctor-overview__intro">
+          <p class="section__eyebrow">Doctor</p>
+          <h2 class="doctor-overview__title">의료진 소개</h2>
+          <p class="doctor-overview__message">기본에 충실한 진료와 환자를 향한 진심을 바탕으로 진료합니다.</p>
+        </header>
+
+        <div class="doctor-overview__visual" role="img" aria-label="의료진 사진 입력 예정">
+          <div class="doctor-overview__photo-placeholder" aria-hidden="true">
+            <span>의료진 사진</span>
+          </div>
+        </div>
+
+        <article class="doctor-overview__profile">
+          <div class="doctor-overview__name-row">
+            <h3 class="doctor-overview__name">원장명</h3>
+            <span class="doctor-overview__position">대표원장</span>
+          </div>
+          <p class="doctor-overview__specialty">보건복지부 인증 통합치의학과 전문의</p>
+
+          <ul class="doctor-overview__credentials" aria-label="전문의 자격">
+            <li>통합치의학과 전문의</li>
+            <li>임플란트 및 보철 진료</li>
+            <li>자연치아 보존 진료</li>
+          </ul>
+
+          <section class="doctor-overview__career" aria-labelledby="doctor-career-title">
+            <h4 id="doctor-career-title">주요 약력</h4>
+            <ul>
+              <li>대학교 치과대학 졸업</li>
+              <li>치과대학병원 인턴·레지던트 수료</li>
+              <li>대한통합치과학회 정회원</li>
+              <li>대한치과보철학회 정회원</li>
+              <li>대한구강악안면임플란트학회 정회원</li>
+              <li>현 병원 대표원장</li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <section id="doctors-legacy" class="section section--doctors" hidden>
+      <div class="doctor-story">
+        <div class="doctor-story__sticky">
+          <div class="doctor-story__intro">
+            <p class="section__eyebrow">Doctor</p>
+            <h2 class="section__title">의료진 소개</h2>
+            <p class="doctor-story__message">의료진 대표 메시지 입력 예정<br>진료의 기준을 소개합니다.</p>
+            <p class="doctor-story__progress" aria-live="polite" aria-atomic="true">
+              <span class="doctor-story__current">01</span>
+              <span aria-hidden="true"> / </span>
+              <span class="doctor-story__total">04</span>
+            </p>
+          </div>
+
+          <div class="doctor-story__visual">
+            <div class="doctor-story__symbol" aria-hidden="true"></div>
+            <!-- Replace the placeholder below with an img using object-fit: contain. -->
+            <div class="doctor-story__portrait" role="img" aria-label="의료진 사진 입력 예정">
+              <span class="doctor-story__portrait-placeholder" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="doctor-story__content">
+            <article class="doctor-story__panel is-active" data-doctor-panel data-doctor-step="0" aria-hidden="false">
+              <p class="doctor-story__step-label">Step 01 · 의료진 소개</p>
+              <div class="doctor-profile__heading">
+                <h3 class="doctor-profile__name">홍길동 <span>대표원장</span></h3>
+                <p class="doctor-profile__specialty">치아교정 · 임플란트 · 구강외과</p>
+              </div>
+              <ul class="doctor-profile__badges" aria-label="핵심 자격">
+                <li>전문의 정보 입력 예정</li>
+                <li>임상 경력 입력 예정</li>
+                <li>학회 인정 정보 입력 예정</li>
+              </ul>
+              <p class="doctor-profile__summary">의료진 소개 문장 입력 예정</p>
+            </article>
+
+            <article class="doctor-story__panel" data-doctor-panel data-doctor-step="1" aria-hidden="true">
+              <p class="doctor-story__step-label">Step 02 · 진료 철학</p>
+              <h3 class="doctor-story__statement">환자의 오늘과 내일을 함께 생각하는 진료</h3>
+              <p class="doctor-story__supporting">진료 철학을 설명하는 문구 입력 예정입니다.<br>충분한 상담을 바탕으로 진료 방향을 안내합니다.</p>
+              <ul class="doctor-principles">
+                <li><strong>정확한 진단</strong><span>검사와 진단 원칙 입력 예정</span></li>
+                <li><strong>충분한 설명</strong><span>상담 원칙 입력 예정</span></li>
+                <li><strong>장기적인 관리</strong><span>사후 관리 원칙 입력 예정</span></li>
+              </ul>
+            </article>
+
+            <article class="doctor-story__panel" data-doctor-panel data-doctor-step="2" aria-hidden="true">
+              <p class="doctor-story__step-label">Step 03 · 전문 진료 분야</p>
+              <h3 class="doctor-story__panel-title">전문 진료 분야</h3>
+              <ul class="doctor-specialties">
+                <li><span>01</span><div><strong>임플란트</strong><p>임플란트 진료 설명 입력 예정</p></div></li>
+                <li><span>02</span><div><strong>치아교정</strong><p>치아교정 진료 설명 입력 예정</p></div></li>
+                <li><span>03</span><div><strong>사랑니 발치</strong><p>사랑니 발치 진료 설명 입력 예정</p></div></li>
+              </ul>
+            </article>
+
+            <article class="doctor-story__panel doctor-story__panel--career" data-doctor-panel data-doctor-step="3" aria-hidden="true">
+              <p class="doctor-story__step-label">Step 04 · 학력·경력·학회</p>
+              <h3 class="doctor-story__panel-title">학력 및 주요 활동</h3>
+              <div class="doctor-careers">
+                <section class="doctor-career-group">
+                  <h4 class="doctor-career-group__title">학력</h4>
+                  <ul class="doctor-career-group__list"><li>학력 정보 입력 예정</li><li>학위 정보 입력 예정</li></ul>
+                </section>
+                <section class="doctor-career-group">
+                  <h4 class="doctor-career-group__title">주요 경력</h4>
+                  <ul class="doctor-career-group__list"><li>주요 경력 입력 예정</li><li>병원 근무 경력 입력 예정</li></ul>
+                </section>
+                <section class="doctor-career-group">
+                  <h4 class="doctor-career-group__title">학회 및 자격</h4>
+                  <ul class="doctor-career-group__list"><li>학회 활동 입력 예정</li><li>자격 정보 입력 예정</li></ul>
+                </section>
+                <section class="doctor-career-group">
+                  <h4 class="doctor-career-group__title">전·현직</h4>
+                  <ul class="doctor-career-group__list"><li>전·현직 정보 입력 예정</li></ul>
+                </section>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="doctor-story__steps" aria-hidden="true">
+          <div class="doctor-story__step-trigger" data-doctor-step-trigger="0"></div>
+          <div class="doctor-story__step-trigger" data-doctor-step-trigger="1"></div>
+          <div class="doctor-story__step-trigger" data-doctor-step-trigger="2"></div>
+          <div class="doctor-story__step-trigger" data-doctor-step-trigger="3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature treatment -->
+    <section id="signature-treatment" class="section section--signature-treatment" data-scroll-reveal data-section-pin>
+      <div class="section__inner">
+        <p class="section__eyebrow">Signature Treatments</p>
+        <h2 class="section__title">주력진료</h2>
+
+        <div class="signature-treatment-accordion" data-signature-treatment-accordion>
+          <article class="signature-treatment-card is-active" data-signature-treatment-card data-signature-treatment-index="0">
+            <button class="signature-treatment-card__trigger" type="button" aria-expanded="true">
+              <!-- Replace this media placeholder with the treatment image. -->
+              <span class="signature-treatment-card__media signature-treatment-card__media--implant" aria-hidden="true"></span>
+              <span class="signature-treatment-card__overlay" aria-hidden="true"></span>
+              <span class="signature-treatment-card__content">
+                <span class="signature-treatment-card__number">01</span>
+                <span class="signature-treatment-card__title">임플란트</span>
+                <span class="signature-treatment-card__details">
+                  <span class="signature-treatment-card__description">정밀한 진단을 바탕으로 진행하는 임플란트 진료</span>
+                  <span class="signature-treatment-card__more">자세히 보기</span>
+                </span>
+              </span>
+            </button>
+          </article>
+
+          <article class="signature-treatment-card" data-signature-treatment-card data-signature-treatment-index="1">
+            <button class="signature-treatment-card__trigger" type="button" aria-expanded="false">
+              <!-- Replace this media placeholder with the treatment image. -->
+              <span class="signature-treatment-card__media signature-treatment-card__media--orthodontics" aria-hidden="true"></span>
+              <span class="signature-treatment-card__overlay" aria-hidden="true"></span>
+              <span class="signature-treatment-card__content">
+                <span class="signature-treatment-card__number">02</span>
+                <span class="signature-treatment-card__title">치아교정</span>
+                <span class="signature-treatment-card__details">
+                  <span class="signature-treatment-card__description">개인별 치아 상태를 고려한 맞춤 교정</span>
+                  <span class="signature-treatment-card__more">자세히 보기</span>
+                </span>
+              </span>
+            </button>
+          </article>
+
+          <article class="signature-treatment-card" data-signature-treatment-card data-signature-treatment-index="2">
+            <button class="signature-treatment-card__trigger" type="button" aria-expanded="false">
+              <!-- Replace this media placeholder with the treatment image. -->
+              <span class="signature-treatment-card__media signature-treatment-card__media--wisdom-tooth" aria-hidden="true"></span>
+              <span class="signature-treatment-card__overlay" aria-hidden="true"></span>
+              <span class="signature-treatment-card__content">
+                <span class="signature-treatment-card__number">03</span>
+                <span class="signature-treatment-card__title">사랑니 발치</span>
+                <span class="signature-treatment-card__details">
+                  <span class="signature-treatment-card__description">정확한 검사를 바탕으로 진행하는 사랑니 발치</span>
+                  <span class="signature-treatment-card__more">자세히 보기</span>
+                </span>
+              </span>
+            </button>
+          </article>
+
+          <article class="signature-treatment-card" data-signature-treatment-card data-signature-treatment-index="3">
+            <button class="signature-treatment-card__trigger" type="button" aria-expanded="false">
+              <!-- Replace this media placeholder with the treatment image. -->
+              <span class="signature-treatment-card__media signature-treatment-card__media--restorative" aria-hidden="true"></span>
+              <span class="signature-treatment-card__overlay" aria-hidden="true"></span>
+              <span class="signature-treatment-card__content">
+                <span class="signature-treatment-card__number">04</span>
+                <span class="signature-treatment-card__title">충치·신경치료</span>
+                <span class="signature-treatment-card__details">
+                  <span class="signature-treatment-card__description">자연치아 보존을 우선하는 충치·신경치료</span>
+                  <span class="signature-treatment-card__more">자세히 보기</span>
+                </span>
+              </span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treatments -->
+    <section id="treatments" class="section section--treatments" data-scroll-reveal data-section-pin>
+      <div class="section__inner"><p class="section__eyebrow">Treatments</p><h2 class="section__title">진료 분야</h2><div class="section__placeholder">진료 항목 영역</div></div>
+    </section>
+
+    <!-- Clinical cases -->
+    <section id="clinical-cases" class="section section--clinical-cases" data-scroll-reveal data-section-pin>
+      <div class="clinical-cases__visual">
+        <!-- Replace this placeholder with the representative clinical case image. -->
+        <div class="clinical-cases__media" role="img" aria-label="임상 사례 대표 이미지 입력 예정"></div>
+        <div class="clinical-cases__overlay" aria-hidden="true"></div>
+        <div class="clinical-cases__content">
+          <p class="clinical-cases__eyebrow">Clinical Cases</p>
+          <h2 class="clinical-cases__title">임상 사례</h2>
+          <p class="clinical-cases__lead">대표 임상 사례 소개 문구 입력 예정</p>
+          <p class="clinical-cases__notice">치료 결과와 안내 문구 입력 예정</p>
+        </div>
+      </div>
+      <div class="clinical-cases__action">
+        <button class="clinical-cases__cta" type="button">사례 더보기 <span aria-hidden="true">+</span></button>
+      </div>
+    </section>
+
+    <!-- Equipment introduction: sticky interaction target -->
+    <section id="equipment-introduction" class="section section--equipment" data-scroll-reveal>
+      <div class="section__inner">
+        <p class="section__eyebrow">Equipment Introduction</p>
+        <h2 class="section__title">장비 소개</h2>
+        <div class="equipment" data-equipment>
+          <div class="equipment__sticky">
+            <div class="equipment__stage">
+              <article class="equipment-item is-active" data-equipment-index="0">
+                <div class="equipment-item__media">
+                  <div class="equipment-item__image-placeholder" role="img" aria-label="첫 번째 장비 이미지 영역"></div>
+                  <span class="focus-frame" aria-hidden="true"><i class="focus-frame__corner focus-frame__corner--tl"></i><i class="focus-frame__corner focus-frame__corner--tr"></i><i class="focus-frame__corner focus-frame__corner--bl"></i><i class="focus-frame__corner focus-frame__corner--br"></i></span>
+                </div>
+              </article>
+              <article class="equipment-item" data-equipment-index="1">
+                <div class="equipment-item__media">
+                  <div class="equipment-item__image-placeholder" role="img" aria-label="두 번째 장비 이미지 영역"></div>
+                  <span class="focus-frame" aria-hidden="true"><i class="focus-frame__corner focus-frame__corner--tl"></i><i class="focus-frame__corner focus-frame__corner--tr"></i><i class="focus-frame__corner focus-frame__corner--bl"></i><i class="focus-frame__corner focus-frame__corner--br"></i></span>
+                </div>
+              </article>
+              <article class="equipment-item" data-equipment-index="2">
+                <div class="equipment-item__media">
+                  <div class="equipment-item__image-placeholder" role="img" aria-label="세 번째 장비 이미지 영역"></div>
+                  <span class="focus-frame" aria-hidden="true"><i class="focus-frame__corner focus-frame__corner--tl"></i><i class="focus-frame__corner focus-frame__corner--tr"></i><i class="focus-frame__corner focus-frame__corner--bl"></i><i class="focus-frame__corner focus-frame__corner--br"></i></span>
+                </div>
+              </article>
+              <article class="equipment-item" data-equipment-index="3">
+                <div class="equipment-item__media">
+                  <div class="equipment-item__image-placeholder" role="img" aria-label="네 번째 장비 이미지 영역"></div>
+                  <span class="focus-frame" aria-hidden="true"><i class="focus-frame__corner focus-frame__corner--tl"></i><i class="focus-frame__corner focus-frame__corner--tr"></i><i class="focus-frame__corner focus-frame__corner--bl"></i><i class="focus-frame__corner focus-frame__corner--br"></i></span>
+                </div>
+              </article>
+              <article class="equipment-item" data-equipment-index="4">
+                <div class="equipment-item__media">
+                  <div class="equipment-item__image-placeholder" role="img" aria-label="다섯 번째 장비 이미지 영역"></div>
+                  <span class="focus-frame" aria-hidden="true"><i class="focus-frame__corner focus-frame__corner--tl"></i><i class="focus-frame__corner focus-frame__corner--tr"></i><i class="focus-frame__corner focus-frame__corner--bl"></i><i class="focus-frame__corner focus-frame__corner--br"></i></span>
+                </div>
+              </article>
+            </div>
+            <div class="equipment__content" aria-live="polite">
+              <div class="equipment__panels">
+                <article class="equipment__panel is-active" data-equipment-panel="0">
+                  <p class="equipment__index">01</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                </article>
+                <article class="equipment__panel" data-equipment-panel="1">
+                  <p class="equipment__index">02</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                </article>
+                <article class="equipment__panel" data-equipment-panel="2">
+                  <p class="equipment__index">03</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                </article>
+                <article class="equipment__panel" data-equipment-panel="3">
+                  <p class="equipment__index">04</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                </article>
+                <article class="equipment__panel" data-equipment-panel="4">
+                  <p class="equipment__index">05</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                </article>
+              </div>
+              <div class="equipment__steps" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span></div>
+              <p class="equipment__scroll-guide" aria-hidden="true">Scroll <span>↓</span></p>
+            </div>
+          </div>
+          <div class="equipment__scroll" aria-hidden="true">
+            <div class="equipment__scroll-trigger" data-equipment-step-trigger="0"></div>
+            <div class="equipment__scroll-trigger" data-equipment-step-trigger="1"></div>
+            <div class="equipment__scroll-trigger" data-equipment-step-trigger="2"></div>
+            <div class="equipment__scroll-trigger" data-equipment-step-trigger="3"></div>
+            <div class="equipment__scroll-trigger" data-equipment-step-trigger="4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior gallery -->
+    <section id="interior" class="section section--interior" data-interior-slider data-section-pin>
+      <div class="section__inner">
+        <div class="interior-heading">
+          <div>
+            <p class="section__eyebrow">Interior</p>
+            <h2 class="section__title">병원 인테리어</h2>
+          </div>
+          <div class="interior-controls">
+            <div class="interior-counter" aria-live="polite" aria-atomic="true">
+              <span data-interior-current>01</span><span aria-hidden="true"> / </span><span data-interior-total>04</span>
+            </div>
+            <button class="interior-button interior-button--prev" type="button" aria-label="이전 인테리어 사진"><span aria-hidden="true">←</span></button>
+            <button class="interior-button interior-button--next" type="button" aria-label="다음 인테리어 사진"><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+
+        <div class="swiper interior-slider">
+          <div class="swiper-wrapper">
+            <figure class="swiper-slide interior-card">
+              <!-- Replace this placeholder with interior image 01. -->
+              <div class="interior-card__media interior-card__media--01" role="img" aria-label="첫 번째 인테리어 사진 입력 예정"></div>
+              <figcaption class="interior-card__caption"><span>01</span><strong>공간명 입력 예정</strong></figcaption>
+            </figure>
+            <figure class="swiper-slide interior-card">
+              <!-- Replace this placeholder with interior image 02. -->
+              <div class="interior-card__media interior-card__media--02" role="img" aria-label="두 번째 인테리어 사진 입력 예정"></div>
+              <figcaption class="interior-card__caption"><span>02</span><strong>공간명 입력 예정</strong></figcaption>
+            </figure>
+            <figure class="swiper-slide interior-card">
+              <!-- Replace this placeholder with interior image 03. -->
+              <div class="interior-card__media interior-card__media--03" role="img" aria-label="세 번째 인테리어 사진 입력 예정"></div>
+              <figcaption class="interior-card__caption"><span>03</span><strong>공간명 입력 예정</strong></figcaption>
+            </figure>
+            <figure class="swiper-slide interior-card">
+              <!-- Replace this placeholder with interior image 04. -->
+              <div class="interior-card__media interior-card__media--04" role="img" aria-label="네 번째 인테리어 사진 입력 예정"></div>
+              <figcaption class="interior-card__caption"><span>04</span><strong>공간명 입력 예정</strong></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location and clinic hours -->
+    <section id="location" class="section section--location" data-scroll-reveal>
+      <div class="location-layout">
+        <div class="location-map" aria-label="병원 위치 지도">
+          <!-- Replace this placeholder with a Naver or Kakao map container. -->
+          <div class="location-map__placeholder" role="img" aria-label="병원 위치 지도 영역">
+            <span>지도 영역</span>
+          </div>
+        </div>
+
+        <div class="location-info">
+          <div class="location-info__decoration" aria-hidden="true"></div>
+          <div class="location-info__inner">
+            <!-- Replace with the clinic BI asset when provided. -->
+            <div class="location-info__brand">
+              <p class="location-info__brand-eyebrow">Dental Clinic</p>
+              <h2 class="location-info__brand-name">병원명 입력 예정</h2>
+            </div>
+
+            <div class="info-row">
+              <h3 class="info-row__label">오시는 길</h3>
+              <div class="info-row__content">
+                <p class="info-row__address">주소 입력 예정</p>
+                <p class="info-row__note">주차 안내 입력 예정</p>
+                <div class="map-links" aria-label="지도 앱 바로가기">
+                  <button class="map-link" type="button">네이버지도</button>
+                  <button class="map-link" type="button">TMAP</button>
+                  <button class="map-link" type="button">카카오지도</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <h3 class="info-row__label">예약문의</h3>
+              <div class="info-row__content">
+                <!-- Replace the placeholder number in both href and text. -->
+                <a class="location-phone" href="tel:0000000000">T. 000-0000-0000</a>
+              </div>
+            </div>
+
+            <div id="clinic-hours" class="info-row">
+              <h3 class="info-row__label">진료시간</h3>
+              <div class="info-row__content">
+                <dl class="clinic-hours">
+                  <div class="clinic-hours__row clinic-hours__row--highlight">
+                    <dt><span class="clinic-hours__badge">야간진료</span> 평일</dt>
+                    <dd>00:00 - 00:00</dd>
+                  </div>
+                  <div class="clinic-hours__row">
+                    <dt>토요일</dt>
+                    <dd>00:00 - 00:00</dd>
+                  </div>
+                  <div class="clinic-hours__row">
+                    <dt>점심시간</dt>
+                    <dd>00:00 - 00:00</dd>
+                  </div>
+                </dl>
+                <p class="clinic-hours__notice">휴진 및 진료 안내 입력 예정</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__content">
+        <div class="site-footer__information">
+          <address class="site-footer__address">
+            <span>내용 입력</span>
+            <span>내용 입력</span>
+            <span>내용 입력</span>
+            <span>내용 입력</span>
+          </address>
+          <p class="site-footer__copyright">내용 입력</p>
+        </div>
+
+        <nav class="site-footer__links" aria-label="푸터 메뉴">
+          <button type="button">내용 입력</button>
+          <span aria-hidden="true"></span>
+          <button type="button">내용 입력</button>
+        </nav>
+      </div>
+
+      <!-- Replace this placeholder with the clinic BI when supplied. -->
+      <div class="site-footer__brand" aria-label="병원 로고 영역" role="img">내용 입력</div>
+    </div>
+  </footer>
+  <button class="top-button" type="button" aria-label="페이지 맨 위로 이동" data-top-button>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+      <path d="m6 14 6-6 6 6"></path>
+    </svg>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.2/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+html { color: var(--color-text); background: var(--color-background); font-family: Arial, "Noto Sans KR", sans-serif; }
+body { min-width: 320px; line-height: 1.6; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+.section__eyebrow { margin-bottom: 0.75rem; color: var(--color-accent); font-size: var(--font-size-sm); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.section__title { font-size: var(--font-size-title); line-height: 1.15; }
+.section__placeholder { display: grid; min-height: 240px; margin-top: 2rem; place-items: center; border: 1px dashed var(--color-border); color: var(--color-muted); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
