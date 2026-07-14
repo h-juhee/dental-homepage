@@ -8,6 +8,7 @@ import { initTopButton } from './modules/topButton.js';
 import { initPhilosophyStory } from './modules/philosophyStory.js';
 import { initInteriorSlider } from './modules/interiorSlider.js';
 import { initSectionPinning } from './modules/sectionPinning.js';
+import { initTreatmentExplorer } from './modules/treatmentExplorer.js?v=4';
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
@@ -20,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initDoctorStory();
   initInteriorSlider();
   initSectionPinning();
+  initTreatmentExplorer();
 });

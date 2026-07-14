@@ -5,7 +5,6 @@ export function initPhilosophyStory() {
   const story = section.querySelector('.philosophy-story');
   const sticky = section.querySelector('.philosophy-story__sticky');
   const messages = [...section.querySelectorAll('[data-philosophy-message]')];
-  const media = section.querySelector('.philosophy-story__placeholder');
   if (!story || !sticky || messages.length === 0) return;
 
   const gsap = typeof window.gsap === 'object' ? window.gsap : null;
@@ -14,7 +13,6 @@ export function initPhilosophyStory() {
   const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   let activeIndex = 0;
   let storyTrigger = null;
-  let mediaTween = null;
 
   const activateStep = (index) => {
     if (index === activeIndex && messages[index]?.classList.contains('is-active')) return;
@@ -23,6 +21,7 @@ export function initPhilosophyStory() {
     messages.forEach((message, messageIndex) => {
       const isActive = messageIndex === index;
       message.classList.toggle('is-active', isActive);
+      message.classList.toggle('is-before', messageIndex < index);
       message.setAttribute('aria-hidden', String(!isActive));
     });
 
@@ -30,27 +29,31 @@ export function initPhilosophyStory() {
 
   const showAllMessages = () => {
     story.classList.add('is-fallback');
+    story.classList.remove('is-closing');
     messages.forEach((message) => message.removeAttribute('aria-hidden'));
   };
 
   const clearInteractions = () => {
     storyTrigger?.kill();
-    mediaTween?.scrollTrigger?.kill();
-    mediaTween?.kill();
     storyTrigger = null;
-    mediaTween = null;
   };
 
   const createInteractions = () => {
     clearInteractions();
     story.classList.remove('is-fallback');
+    story.classList.remove('is-closing');
     activeIndex = -1;
     activateStep(0);
+
+    const scrollDistance = () => {
+      const viewportHeight = Math.max(window.innerHeight, mobileQuery.matches ? 640 : 760);
+      return viewportHeight * (mobileQuery.matches ? 1.55 : 1.85);
+    };
 
     storyTrigger = ScrollTrigger.create({
       trigger: story,
       start: 'top top',
-      end: () => `+=${Math.max(window.innerHeight, 760) * messages.length}`,
+      end: () => `+=${scrollDistance()}`,
       pin: sticky,
       pinSpacing: true,
       refreshPriority: 2,
@@ -59,27 +62,15 @@ export function initPhilosophyStory() {
       onUpdate(self) {
         const nextIndex = Math.min(messages.length - 1, Math.floor(self.progress * messages.length));
         if (nextIndex !== activeIndex) activateStep(nextIndex);
+        story.classList.toggle('is-closing', self.progress >= 0.88);
       }
     });
-
-    if (media) {
-      mediaTween = gsap.fromTo(media, { scale: 1.04 }, {
-        scale: 1,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: story,
-          start: 'top top',
-          end: () => `+=${Math.max(window.innerHeight, 760) * messages.length}`,
-          scrub: true
-        }
-      });
-    }
   };
 
   const updateMode = () => {
     clearInteractions();
 
-    if (mobileQuery.matches || reducedMotionQuery.matches || !gsap || !ScrollTrigger) {
+    if (reducedMotionQuery.matches || !gsap || !ScrollTrigger) {
       showAllMessages();
       return;
     }

@@ -7,17 +7,19 @@
   <title>Dental Clinic</title>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.2/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/variables.css">
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/layout.css">
-  <link rel="stylesheet" href="./css/responsive.css">
+  <link rel="stylesheet" href="./css/reset.css?v=10">
+  <link rel="stylesheet" href="./css/variables.css?v=10">
+  <link rel="stylesheet" href="./css/common.css?v=10">
+  <link rel="stylesheet" href="./css/layout.css?v=10">
+  <link rel="stylesheet" href="./css/responsive.css?v=10">
 </head>
 <body id="top">
   <!-- Site header / GNB -->
   <header class="site-header" data-site-header>
     <div class="site-header__inner">
-      <a class="site-header__logo" href="#top" aria-label="페이지 맨 위로 이동">로고영역</a>
+      <a class="site-header__logo" href="#top" aria-label="주희네병원 홈으로 이동">
+        <img src="./assets/images/juhee-hospital-logo.png" alt="주희네병원">
+      </a>
       <nav id="site-navigation" class="site-nav" aria-label="주요 메뉴">
         <ul class="site-nav__list">
           <li><a href="#philosophy" aria-label="첫 번째 메뉴">GNB</a></li>
@@ -63,7 +65,6 @@
                 <p class="main-visual__eyebrow" data-hero-animate>Dental Clinic</p>
                 <h1 class="main-visual__title" data-hero-animate>건강한 미소를 위한 진료</h1>
                 <p class="main-visual__description" data-hero-animate>병원의 진료 철학과 대표 메시지가 들어가는 영역입니다.</p>
-                <button class="main-visual__cta" type="button" data-hero-animate>진료 안내</button>
               </div>
             </div>
           </article>
@@ -81,7 +82,6 @@
                 <p class="main-visual__eyebrow" data-hero-animate>Doctor</p>
                 <h2 class="main-visual__title" data-hero-animate>충분한 설명에서 시작되는 진료</h2>
                 <p class="main-visual__description" data-hero-animate>의료진의 진료 원칙을 소개하는 문구가 들어갑니다.</p>
-                <button class="main-visual__cta" type="button" data-hero-animate>의료진 소개</button>
               </div>
             </div>
           </article>
@@ -99,7 +99,6 @@
                 <p class="main-visual__eyebrow" data-hero-animate>Signature Treatment</p>
                 <h2 class="main-visual__title" data-hero-animate>병원의 주력진료를 만나보세요</h2>
                 <p class="main-visual__description" data-hero-animate>대표 진료 분야에 대한 짧은 설명이 들어갑니다.</p>
-                <button class="main-visual__cta" type="button" data-hero-animate>주력진료 보기</button>
               </div>
             </div>
           </article>
@@ -130,17 +129,18 @@
           <div class="philosophy-story__overlay" aria-hidden="true"></div>
 
           <div class="philosophy-story__inner">
-            <div class="philosophy-story__heading">
+            <header class="philosophy-story__heading">
               <p class="philosophy-story__eyebrow">Philosophy</p>
               <h2 class="philosophy-story__title">진료 철학</h2>
-            </div>
+            </header>
 
             <div class="philosophy-story__messages" aria-live="off">
-              <p class="philosophy-story__message is-active" data-philosophy-message data-philosophy-step="0" aria-hidden="false">정확하게 살피고</p>
-              <p class="philosophy-story__message" data-philosophy-message data-philosophy-step="1" aria-hidden="true">충분히 설명하며</p>
-              <p class="philosophy-story__message" data-philosophy-message data-philosophy-step="2" aria-hidden="true">꼭 필요한 진료를 제안합니다</p>
+              <p class="philosophy-story__message is-active" data-philosophy-message data-philosophy-step="0" aria-hidden="false"><span>01</span>치료를 늘리는 기술보다<br>치료를 줄이는 판단</p>
+              <p class="philosophy-story__message" data-philosophy-message data-philosophy-step="1" aria-hidden="true"><span>02</span>보이는 증상보다<br>그 이유를 먼저 봅니다</p>
+              <p class="philosophy-story__message" data-philosophy-message data-philosophy-step="2" aria-hidden="true"><span>03</span>빠르게 끝내는 것보다<br>오래 괜찮게 만드는 일</p>
             </div>
 
+            <p class="philosophy-story__closing" data-philosophy-closing>우리가 만드는 것은 치료가 아니라 기준입니다</p>
           </div>
         </div>
       </div>
@@ -157,16 +157,16 @@
 
         <div class="doctor-overview__visual" role="img" aria-label="의료진 임시 이미지">
           <div class="doctor-overview__photo-placeholder" aria-hidden="true">
-            <img src="./assets/images/doctor-temp.png" alt="">
+            <img src="./assets/images/doctor-transparent.png" alt="">
           </div>
         </div>
 
         <article class="doctor-overview__profile">
           <div class="doctor-overview__name-row">
-            <h3 class="doctor-overview__name">원장명</h3>
+            <h3 class="doctor-overview__name">홍주희</h3>
             <span class="doctor-overview__position">대표원장</span>
           </div>
-          <p class="doctor-overview__specialty">보건복지부 인증 통합치의학과 전문의</p>
+          <p class="doctor-overview__specialty">주희네병원 인증 통합치의학과 전문의</p>
 
           <ul class="doctor-overview__credentials" aria-label="전문의 자격">
             <li>통합치의학과 전문의</li>
@@ -357,7 +357,40 @@
 
     <!-- Treatments -->
     <section id="treatments" class="section section--treatments" data-scroll-reveal data-section-pin>
-      <div class="section__inner"><p class="section__eyebrow">Treatments</p><h2 class="section__title">진료 분야</h2><div class="section__placeholder">진료 항목 영역</div></div>
+      <div class="section__inner">
+        <p class="section__eyebrow">Treatments</p>
+        <h2 class="section__title">진료 분야</h2>
+        <p class="treatments__intro">구강검진부터 예방과 치료까지, 필요한 진료를 한눈에 살펴보세요.</p>
+
+        <div class="treatment-explorer" data-treatment-explorer>
+          <div class="treatment-explorer__list" role="group" aria-label="진료 분야 선택">
+            <button class="treatment-orb treatment-orb--navy is-active" type="button" aria-pressed="true" data-treatment-name="일반진료" data-treatment-description="정기적인 구강 검진과 정확한 진단을 바탕으로 현재 상태에 필요한 기본 치료를 안내합니다." data-treatment-target="#location">
+              <span class="treatment-orb__number">01</span><strong>일반진료</strong><span>기본적인 구강 검진과 치료</span>
+            </button>
+            <button class="treatment-orb treatment-orb--photo treatment-orb--prevention" type="button" aria-pressed="false" data-treatment-name="예방진료" data-treatment-description="스케일링과 불소도포, 올바른 구강 관리 교육으로 치아와 잇몸 질환을 미리 예방합니다." data-treatment-target="#location">
+              <span class="treatment-orb__number">02</span><strong>예방진료</strong><span>예방 중심의 꾸준한 구강 관리</span>
+            </button>
+            <button class="treatment-orb treatment-orb--green" type="button" aria-pressed="false" data-treatment-name="보존치료" data-treatment-description="충치와 손상된 치아를 세심하게 치료하며 가능한 한 자연치아를 오래 보존하는 것을 우선합니다." data-treatment-target="#signature-treatment">
+              <span class="treatment-orb__number">03</span><strong>보존치료</strong><span>자연치아 보존을 우선하는 치료</span>
+            </button>
+            <button class="treatment-orb treatment-orb--photo treatment-orb--periodontal" type="button" aria-pressed="false" data-treatment-name="치주치료" data-treatment-description="잇몸 염증과 치주 상태를 확인하고 단계별 치료와 정기 관리를 통해 잇몸 건강 회복을 돕습니다." data-treatment-target="#location">
+              <span class="treatment-orb__number">04</span><strong>치주치료</strong><span>잇몸 건강 회복과 관리</span>
+            </button>
+            <button class="treatment-orb treatment-orb--blue" type="button" aria-pressed="false" data-treatment-name="심미치료" data-treatment-description="치아의 색과 형태, 전체적인 인상을 함께 고려해 자연스럽고 조화로운 심미 개선을 계획합니다." data-treatment-target="#clinical-cases">
+              <span class="treatment-orb__number">05</span><strong>심미치료</strong><span>자연스럽고 조화로운 심미 개선</span>
+            </button>
+            <button class="treatment-orb treatment-orb--photo treatment-orb--pediatric" type="button" aria-pressed="false" data-treatment-name="소아진료" data-treatment-description="아이의 성장 단계와 눈높이를 고려해 치과에 편안하게 적응할 수 있는 진료 환경을 제공합니다." data-treatment-target="#location">
+              <span class="treatment-orb__number">06</span><strong>소아진료</strong><span>아이 눈높이에 맞춘 편안한 진료</span>
+            </button>
+          </div>
+
+          <div class="treatment-explorer__detail" aria-live="polite">
+            <div><span class="treatment-explorer__label">Selected treatment</span><h3 data-treatment-detail-name>일반진료</h3></div>
+            <p data-treatment-detail-description>정기적인 구강 검진과 정확한 진단을 바탕으로 현재 상태에 필요한 기본 치료를 안내합니다.</p>
+            <a class="treatment-explorer__link" href="#location" data-treatment-detail-link>진료 안내 보기 <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Clinical cases -->
@@ -421,19 +454,19 @@
             <div class="equipment__content" aria-live="polite">
               <div class="equipment__panels">
                 <article class="equipment__panel is-active" data-equipment-panel="0">
-                  <p class="equipment__index">01</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                  <p class="equipment__index">01</p><h3 class="equipment__title">3D 치과용 CBCT</h3><p class="equipment__description">치아와 잇몸뼈, 신경의 위치를 3차원 영상으로 정밀하게 확인해 진단과 치료 계획 수립에 활용합니다.</p>
                 </article>
                 <article class="equipment__panel" data-equipment-panel="1">
-                  <p class="equipment__index">02</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                  <p class="equipment__index">02</p><h3 class="equipment__title">디지털 구강스캐너</h3><p class="equipment__description">구강 내부를 빠르게 촬영해 디지털 인상 데이터를 만들며, 보철과 교정 치료의 정밀한 설계를 돕습니다.</p>
                 </article>
                 <article class="equipment__panel" data-equipment-panel="2">
-                  <p class="equipment__index">03</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                  <p class="equipment__index">03</p><h3 class="equipment__title">치과용 미세현미경</h3><p class="equipment__description">육안으로 보기 어려운 치아 내부를 확대해 확인하며, 신경치료와 미세한 치아 보존 치료에 활용합니다.</p>
                 </article>
                 <article class="equipment__panel" data-equipment-panel="3">
-                  <p class="equipment__index">04</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                  <p class="equipment__index">04</p><h3 class="equipment__title">고압증기 멸균기</h3><p class="equipment__description">고온·고압의 증기로 진료 기구를 멸균해 감염 관리 원칙에 맞는 위생적인 진료 환경을 유지합니다.</p>
                 </article>
                 <article class="equipment__panel" data-equipment-panel="4">
-                  <p class="equipment__index">05</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
+                  <p class="equipment__index">05</p><h3 class="equipment__title">CAD/CAM 밀링 시스템</h3><p class="equipment__description">디지털로 설계한 보철물을 정밀하게 가공해 환자의 구강 형태에 맞는 맞춤형 보철 제작을 지원합니다.</p>
                 </article>
               </div>
             </div>
@@ -463,24 +496,20 @@
         <div class="swiper interior-slider">
           <div class="swiper-wrapper">
             <figure class="swiper-slide interior-card">
-              <!-- Replace this placeholder with interior image 01. -->
-              <div class="interior-card__media interior-card__media--01" role="img" aria-label="첫 번째 인테리어 사진 입력 예정"></div>
-              <figcaption class="interior-card__caption"><span>01</span><strong>공간명 입력 예정</strong></figcaption>
+              <div class="interior-card__media interior-card__media--01" role="img" aria-label="안내 데스크와 휴식 공간이 마련된 대기 라운지"></div>
+              <figcaption class="interior-card__caption"><span>01</span><strong>대기 라운지</strong></figcaption>
             </figure>
             <figure class="swiper-slide interior-card">
-              <!-- Replace this placeholder with interior image 02. -->
-              <div class="interior-card__media interior-card__media--02" role="img" aria-label="두 번째 인테리어 사진 입력 예정"></div>
-              <figcaption class="interior-card__caption"><span>02</span><strong>공간명 입력 예정</strong></figcaption>
+              <div class="interior-card__media interior-card__media--02" role="img" aria-label="독립된 공간에 치과 진료 장비가 배치된 진료실"></div>
+              <figcaption class="interior-card__caption"><span>02</span><strong>독립 진료실</strong></figcaption>
             </figure>
             <figure class="swiper-slide interior-card">
-              <!-- Replace this placeholder with interior image 03. -->
-              <div class="interior-card__media interior-card__media--03" role="img" aria-label="세 번째 인테리어 사진 입력 예정"></div>
-              <figcaption class="interior-card__caption"><span>03</span><strong>공간명 입력 예정</strong></figcaption>
+              <div class="interior-card__media interior-card__media--03" role="img" aria-label="모니터와 원형 테이블이 마련된 프라이빗 상담실"></div>
+              <figcaption class="interior-card__caption"><span>03</span><strong>프라이빗 상담실</strong></figcaption>
             </figure>
             <figure class="swiper-slide interior-card">
-              <!-- Replace this placeholder with interior image 04. -->
-              <div class="interior-card__media interior-card__media--04" role="img" aria-label="네 번째 인테리어 사진 입력 예정"></div>
-              <figcaption class="interior-card__caption"><span>04</span><strong>공간명 입력 예정</strong></figcaption>
+              <div class="interior-card__media interior-card__media--04" role="img" aria-label="멸균 장비와 밀봉된 진료 기구가 정돈된 소독실"></div>
+              <figcaption class="interior-card__caption"><span>04</span><strong>멸균·소독실</strong></figcaption>
             </figure>
           </div>
         </div>
@@ -491,10 +520,13 @@
     <section id="location" class="section section--location" data-scroll-reveal>
       <div class="location-layout">
         <div class="location-map" aria-label="병원 위치 지도">
-          <!-- Replace this placeholder with a Naver or Kakao map container. -->
-          <div class="location-map__placeholder" role="img" aria-label="병원 위치 지도 영역">
-            <span>지도 영역</span>
-          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357b771a51753a79%3A0xbaabe72b79d2b422!2z7J247LKc6rSR7Jet7IucIOyXsOyImOq1rCDshqHrj4Tqs7ztlZnroZw!5e0!3m2!1sko!2skr!4v1784016465640!5m2!1sko!2skr"
+            title="병원 위치 지도"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
         </div>
 
         <div class="location-info">
@@ -503,14 +535,14 @@
             <!-- Replace with the clinic BI asset when provided. -->
             <div class="location-info__brand">
               <p class="location-info__brand-eyebrow">Dental Clinic</p>
-              <h2 class="location-info__brand-name">병원명 입력 예정</h2>
+              <h2 class="location-info__brand-name">주희네 병원</h2>
             </div>
 
             <div class="info-row">
               <h3 class="info-row__label">오시는 길</h3>
               <div class="info-row__content">
-                <p class="info-row__address">주소 입력 예정</p>
-                <p class="info-row__note">주차 안내 입력 예정</p>
+                <p class="info-row__address">인천 연수구 송도과학로 80</p>
+                <p class="info-row__note">주차 불가</p>
                 <div class="map-links" aria-label="지도 앱 바로가기">
                   <button class="map-link" type="button">네이버지도</button>
                   <button class="map-link" type="button">TMAP</button>
@@ -533,18 +565,18 @@
                 <dl class="clinic-hours">
                   <div class="clinic-hours__row clinic-hours__row--highlight">
                     <dt><span class="clinic-hours__badge">야간진료</span> 평일</dt>
-                    <dd>00:00 - 00:00</dd>
+                    <dd>09:00 - 20:00</dd>
                   </div>
                   <div class="clinic-hours__row">
                     <dt>토요일</dt>
-                    <dd>00:00 - 00:00</dd>
+                    <dd>09:00 - 13:00</dd>
                   </div>
                   <div class="clinic-hours__row">
                     <dt>점심시간</dt>
-                    <dd>00:00 - 00:00</dd>
+                    <dd>13:00 - 14:00</dd>
                   </div>
                 </dl>
-                <p class="clinic-hours__notice">휴진 및 진료 안내 입력 예정</p>
+                <p class="clinic-hours__notice">토, 일 공휴일 휴진</p>
               </div>
             </div>
           </div>
@@ -586,6 +618,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.2/swiper-bundle.min.js"></script>
-  <script type="module" src="./js/main.js?v=5"></script>
+  <script type="module" src="./js/main.js?v=9"></script>
 </body>
 </html>

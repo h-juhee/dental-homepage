@@ -1,5 +1,5 @@
-html { color: var(--color-text); background: var(--color-background); font-family: var(--font-family-base); font-weight: var(--font-weight-regular); }
-body { min-width: 320px; line-height: 1.6; }
+html { overflow-x: clip; color: var(--color-text); background: var(--color-background); font-family: var(--font-family-base); font-weight: var(--font-weight-regular); }
+body { min-width: 320px; overflow-x: clip; line-height: 1.6; }
 strong, b { font-weight: var(--font-weight-bold); }
 :focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
 .section__eyebrow { margin-bottom: 0.75rem; color: var(--color-accent); font-size: var(--font-size-sm); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
