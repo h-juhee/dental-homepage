@@ -13,6 +13,12 @@
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-title: clamp(2rem, 4vw, 4rem);
+  --font-family-base: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-max: 800;
   --z-header: 100;
   --z-sticky: 10;
   --duration-fast: 200ms;

@@ -7,6 +7,7 @@ import { initHeroSlider } from './modules/heroSlider.js';
 import { initTopButton } from './modules/topButton.js';
 import { initPhilosophyStory } from './modules/philosophyStory.js';
 import { initInteriorSlider } from './modules/interiorSlider.js';
+import { initSectionPinning } from './modules/sectionPinning.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPhilosophyStory();
   initDoctorStory();
   initInteriorSlider();
+  initSectionPinning();
 });

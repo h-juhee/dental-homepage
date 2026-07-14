@@ -1,41 +1,48 @@
 export function initInteriorSlider() {
-  const section = document.querySelector('[data-interior-slider]');
-  if (!section || typeof window.Swiper !== 'function') return;
+  const slider = document.querySelector('[data-interior-slider] .interior-slider');
+  const track = slider?.querySelector('.swiper-wrapper');
+  const originals = track ? [...track.querySelectorAll('.interior-card')] : [];
+  if (!slider || !track || originals.length === 0) return;
 
-  const sliderElement = section.querySelector('.interior-slider');
-  const previousButton = section.querySelector('.interior-button--prev');
-  const nextButton = section.querySelector('.interior-button--next');
-  const currentElement = section.querySelector('[data-interior-current]');
-  const totalElement = section.querySelector('[data-interior-total]');
-  const slides = [...section.querySelectorAll('.interior-card')];
-  if (!sliderElement || !previousButton || !nextButton || slides.length === 0) return;
+  slider.classList.add('is-marquee');
 
-  if (totalElement) totalElement.textContent = String(slides.length).padStart(2, '0');
+  originals.forEach((slide) => {
+    const clone = slide.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.classList.add('interior-card--clone');
+    track.append(clone);
+  });
 
-  const updateCounter = (swiper) => {
-    if (currentElement) currentElement.textContent = String(swiper.realIndex + 1).padStart(2, '0');
+  let offset = 0;
+  let loopDistance = 0;
+  let previousTime = 0;
+  const speed = 72;
+
+  const measure = () => {
+    const first = originals[0];
+    const firstClone = track.querySelector('.interior-card--clone');
+    if (!first || !firstClone) return;
+
+    loopDistance = firstClone.offsetLeft - first.offsetLeft;
+    if (loopDistance > 0) offset %= loopDistance;
   };
 
-  new window.Swiper(sliderElement, {
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    speed: 800,
-    loop: true,
-    grabCursor: true,
-    keyboard: { enabled: true, onlyInViewport: true },
-    navigation: { prevEl: previousButton, nextEl: nextButton },
-    a11y: {
-      enabled: true,
-      prevSlideMessage: '이전 인테리어 사진',
-      nextSlideMessage: '다음 인테리어 사진'
-    },
-    breakpoints: {
-      768: { spaceBetween: 24 },
-      1280: { spaceBetween: 32 }
-    },
-    on: {
-      init: updateCounter,
-      slideChange: updateCounter
+  const animate = (time) => {
+    if (!previousTime) previousTime = time;
+    const elapsed = Math.min((time - previousTime) / 1000, 0.1);
+    previousTime = time;
+
+    if (loopDistance > 0) {
+      offset = (offset + (speed * elapsed)) % loopDistance;
+      track.style.transform = `translate3d(${-offset}px, 0, 0)`;
     }
-  });
+
+    window.requestAnimationFrame(animate);
+  };
+
+  const resizeObserver = new ResizeObserver(measure);
+  resizeObserver.observe(slider);
+  window.addEventListener('load', measure, { once: true });
+  measure();
+  window.requestAnimationFrame(animate);
 }

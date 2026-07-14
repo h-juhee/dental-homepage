@@ -1,5 +1,5 @@
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
 body, h1, h2, h3, p, ul { margin: 0; }
 ul { padding: 0; list-style: none; }
 img, picture, video, svg { display: block; max-width: 100%; }

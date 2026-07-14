@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="치과 홈페이지 메인페이지 초기 구조">
   <title>Dental Clinic</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.2/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/variables.css">
@@ -12,18 +13,18 @@
   <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/responsive.css">
 </head>
-<body>
+<body id="top">
   <!-- Site header / GNB -->
   <header class="site-header" data-site-header>
     <div class="site-header__inner">
-      <a class="site-header__logo" href="#main-visual" aria-label="홈으로 이동">로고영역</a>
+      <a class="site-header__logo" href="#top" aria-label="페이지 맨 위로 이동">로고영역</a>
       <nav id="site-navigation" class="site-nav" aria-label="주요 메뉴">
         <ul class="site-nav__list">
-          <li><span>GNB</span></li>
-          <li><span>GNB</span></li>
-          <li><span>GNB</span></li>
-          <li><span>GNB</span></li>
-          <li><span>GNB</span></li>
+          <li><a href="#philosophy" aria-label="첫 번째 메뉴">GNB</a></li>
+          <li><a href="#doctors" aria-label="두 번째 메뉴">GNB</a></li>
+          <li><a href="#treatments" aria-label="세 번째 메뉴">GNB</a></li>
+          <li><a href="#interior" aria-label="네 번째 메뉴">GNB</a></li>
+          <li><a href="#location" aria-label="다섯 번째 메뉴">GNB</a></li>
         </ul>
       </nav>
       <div class="site-header__actions">
@@ -35,6 +36,11 @@
         </button>
         <!-- Future night-clinic banner: add its confirmed text or link here. -->
         <div class="site-header__night-clinic" aria-label="야간진료 배너 영역" role="img"></div>
+        <button class="site-header__menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-navigation">
+          <span class="site-header__menu-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
       </div>
     </div>
   </header>
@@ -149,9 +155,9 @@
           <p class="doctor-overview__message">기본에 충실한 진료와 환자를 향한 진심을 바탕으로 진료합니다.</p>
         </header>
 
-        <div class="doctor-overview__visual" role="img" aria-label="의료진 사진 입력 예정">
+        <div class="doctor-overview__visual" role="img" aria-label="의료진 임시 이미지">
           <div class="doctor-overview__photo-placeholder" aria-hidden="true">
-            <span>의료진 사진</span>
+            <img src="./assets/images/doctor-temp.png" alt="">
           </div>
         </div>
 
@@ -379,6 +385,7 @@
         <h2 class="section__title">장비 소개</h2>
         <div class="equipment" data-equipment>
           <div class="equipment__sticky">
+            <p class="equipment__status"><span class="equipment__status-dot" aria-hidden="true"></span>Digital Optimum</p>
             <div class="equipment__stage">
               <article class="equipment-item is-active" data-equipment-index="0">
                 <div class="equipment-item__media">
@@ -429,9 +436,8 @@
                   <p class="equipment__index">05</p><h3 class="equipment__title">장비명</h3><p class="equipment__description">장비 설명 영역</p>
                 </article>
               </div>
-              <div class="equipment__steps" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span></div>
-              <p class="equipment__scroll-guide" aria-hidden="true">Scroll <span>↓</span></p>
             </div>
+            <p class="equipment__scroll-guide" aria-hidden="true">Scroll <span>↓</span></p>
           </div>
           <div class="equipment__scroll" aria-hidden="true">
             <div class="equipment__scroll-trigger" data-equipment-step-trigger="0"></div>
@@ -451,13 +457,6 @@
           <div>
             <p class="section__eyebrow">Interior</p>
             <h2 class="section__title">병원 인테리어</h2>
-          </div>
-          <div class="interior-controls">
-            <div class="interior-counter" aria-live="polite" aria-atomic="true">
-              <span data-interior-current>01</span><span aria-hidden="true"> / </span><span data-interior-total>04</span>
-            </div>
-            <button class="interior-button interior-button--prev" type="button" aria-label="이전 인테리어 사진"><span aria-hidden="true">←</span></button>
-            <button class="interior-button interior-button--next" type="button" aria-label="다음 인테리어 사진"><span aria-hidden="true">→</span></button>
           </div>
         </div>
 
@@ -587,6 +586,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.2/swiper-bundle.min.js"></script>
-  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/main.js?v=5"></script>
 </body>
 </html>
